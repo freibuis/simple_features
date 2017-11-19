@@ -1,0 +1,24 @@
+####################################################################
+##
+#
+# Simple Features
+#
+# usage:
+#
+#  env_name:
+#    feature_name_one: true
+#    feature_name_two: false
+#
+# this will activated in rails view via the helper as features.feature_name_one?
+##
+####################################################################
+
+
+production:<% features.each do |feature| %>
+  <%= "#{feature}: true" %><% end %>
+
+development:<% features.each do |feature| %>
+  <%= "#{feature}: true" %><% end %>
+
+test:<% features.each do |feature| %>
+  <%= "#{feature}: true" %><% end %>
