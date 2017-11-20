@@ -78,3 +78,7 @@ using simple features wrap around debugging coding (dont do this , its an exampl
 logger.debug "some aweomse words!" if features.debugging?
 ```
 
+
+## Tests
+
+None. its simple... ok you got me I should write some. %TODO%
