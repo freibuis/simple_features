@@ -1,8 +1,9 @@
 # SimpleFeatures
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_feature`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem was design to 1 thing and it well. (me thinks)
 
-TODO: Delete this and the text above, and describe your gem
+The reason for why I started to write this gem is that of all the feautre gems it was
+quicker to right this that learn how they work And thats why its simple
 
 ## Installation
 
@@ -22,29 +23,58 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-### Via Class
+
+### Basic usage
 
 this can be assigned any where in code as
 
 ```ruby
-features SimpleFeatures::Features.new()
+features = SimpleFeatures::Features.new( { feature_a: true, feature_a: false } )
+
+puts "feature_a" if features.feature_a?
+puts "feature_b" if features.feature_b?
+
 ```
 
-## Development
+### Via Config file
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
+features = SimpleFeatures::Features.load_config('config/simple_features.yml')
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Rails & Rails Helpers
 
-## Contributing
+`Rails` only needs to have the config file in `config/simple_features.yml`
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/simple_feature. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## License
+```bash
+rails generate simple_features
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+```
+this will drop a template config: `config/simple_features.yml`
 
-## Code of Conduct
+if you want to use the generator to create with feature names do the following
+```bash
+rails generate simple_features --features new_tool old_tool new_idea
 
-Everyone interacting in the SimpleFeature project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/simple_feature/blob/master/CODE_OF_CONDUCT.md).
+puts features.new_idea?
+>> true
+
+```
+
+## examples
+
+### within Rails Views
+
+```html
+<body>
+<%= link_to 'New Feature', new_feature_path if features.new_feature? %>
+</body>
+```
+
+using simple features wrap around debugging coding (dont do this , its an example )
+
+```ruby
+logger.debug "some aweomse words!" if features.debugging?
+```
+
