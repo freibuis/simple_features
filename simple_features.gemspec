@@ -14,9 +14,9 @@ Gem::Specification.new do |spec|
   spec.homepage    = "https://github.com/freibuis/simple_features"
   spec.license     = "MIT"
 
-  s.metadata = {
-      changelog_uri:   "https://github.com/freibuis/simple_features/blob/master/CHANGELOG",
-      source_code_uri: "https://github.com/freibuis/simple_features",
+  spec.metadata = {
+      "changelog_uri"   => "https://github.com/freibuis/simple_features/blob/master/CHANGELOG",
+      "source_code_uri" => "https://github.com/freibuis/simple_features",
   }
 
 
