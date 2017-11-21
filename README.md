@@ -1,9 +1,11 @@
 # SimpleFeatures
 
-This gem was design to 1 thing and it well. (me thinks)
+[![Gem Version](https://badge.fury.io/rb/simple_features.svg)](https://badge.fury.io/rb/simple_features)
 
-The reason for why I started to write this gem is that of all the feautre gems, it was
-quicker to write this gem than learn how they work And thats why this gem is overly darn so simple
+This gem was design to just one thing and do it well. (me thinks)
+
+This gem is an overly simple implementation of feature flagging. The reason for that was, I found it easier to write
+a gem and learn how feature flagging works as opposed to learning from one of the existing feature gems.
 
 ## Installation
 
