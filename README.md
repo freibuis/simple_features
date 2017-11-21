@@ -2,6 +2,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/simple_features.svg)](https://badge.fury.io/rb/simple_features)
 
+[![Build Status](https://travis-ci.org/freibuis/simple_features.svg?branch=master)](https://travis-ci.org/freibuis/simple_features)
+
 This gem was design to just one thing and do it well. (me thinks)
 
 This gem is an overly simple implementation of feature flagging. The reason for that was, I found it easier to write
