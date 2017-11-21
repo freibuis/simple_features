@@ -4,24 +4,21 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "simple_features/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "simple_features"
-  spec.version       = SimpleFeatures::VERSION
-  spec.authors       = ["Freibuis"]
-  spec.email         = ["freibuis@gmail.com"]
+  spec.name    = "simple_features"
+  spec.version = SimpleFeatures::VERSION
+  spec.authors = ["Freibuis"]
+  spec.email   = ["freibuis@gmail.com"]
 
-  spec.summary       = %q{simple features}
-  spec.description   = %q{simple features}
-  #spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.summary     = %q{simple features}
+  spec.description = %q{simple features: the cheap ass'ed flag flipper}
+  spec.homepage    = "https://github.com/freibuis/simple_features"
+  spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  s.metadata = {
+      changelog_uri:   "https://github.com/freibuis/simple_features/blob/master/CHANGELOG",
+      source_code_uri: "https://github.com/freibuis/simple_features",
+  }
+
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
