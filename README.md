@@ -2,8 +2,8 @@
 
 This gem was design to 1 thing and it well. (me thinks)
 
-The reason for why I started to write this gem is that of all the feautre gems it was
-quicker to right this that learn how they work And thats why its simple
+The reason for why I started to write this gem is that of all the feautre gems, it was
+quicker to write this gem than learn how they work And thats why this gem is overly darn so simple
 
 ## Installation
 
@@ -41,6 +41,29 @@ puts "feature_b" if features.feature_b?
 ```ruby
 features = SimpleFeatures::Features.load_config('config/simple_features.yml')
 ```
+
+#### example config file
+
+```yaml
+production:
+  feature_one: true
+  feature_two: false
+  feature_three: true
+
+```
+
+```ruby
+puts features.feature_one?
+>> true
+
+puts features.feature_two?
+>> false
+
+puts features.feature_three?
+>> true
+
+```
+
 
 ### Rails & Rails Helpers
 
