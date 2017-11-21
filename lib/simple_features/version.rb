@@ -1,3 +1,3 @@
 module SimpleFeatures
-  VERSION = "0.9.100"
+  VERSION = "1.0.0"
 end
