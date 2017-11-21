@@ -96,7 +96,7 @@ puts features.new_idea?
 <%= link_to 'New Feature', new_feature_path if features.new_feature? %>
 </body>
 ```
-
+ “it’s simple”
 using simple features wrap around debugging coding (dont do this , its an example )
 
 ```ruby
@@ -106,4 +106,4 @@ logger.debug "some aweomse words!" if features.debugging?
 
 ## Tests
 
-None. its simple... ok you got me I should write some. %TODO%
+None.  “it’s simple...” ok you got me I should write some.`%TODO%`
