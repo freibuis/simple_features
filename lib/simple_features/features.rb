@@ -24,8 +24,17 @@ module SimpleFeatures
 
     def make_features
       @features.each do |feature, feature_value|
-        define_singleton_method("#{feature}?") do
-          feature_value
+
+        unless is_boolean? feature_value
+          begin
+            raise ArgumentError.new("Value must be true or false for key #{feature}")
+          rescue ArgumentError => e
+            puts e.message
+          end
+        else
+          define_singleton_method("#{feature}?") do
+            feature_value
+          end
         end
       end
     end
@@ -36,6 +45,11 @@ module SimpleFeatures
       else
         :production
       end
+    end
+
+    def is_boolean?(value)
+      value = "#{value}".downcase
+      ['true', 'false'].include? value
     end
   end
 end
