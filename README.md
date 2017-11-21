@@ -106,4 +106,4 @@ logger.debug "some aweomse words!" if features.debugging?
 
 ## Tests
 
-None.  “it’s simple...” ok you got me I should write some.`%TODO%`
+Some!.  “it’s simple...” ok you got me I should write MOAR! tests.
