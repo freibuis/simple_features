@@ -12,7 +12,7 @@ module SimpleFeatures
     #returns Feature object
     def self.load_config(config_file = nil)
       if defined? 'Rails'
-        features = YAML.load_file(Rails.root.join('config', 'features.yml'))[environment]
+        features = YAML.load_file(Rails.root.join('config', 'simple_features.yml'))[environment]
       else
         features = YAML.load_file(config_file)
       end
